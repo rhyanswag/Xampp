@@ -1,0 +1,13 @@
+Extract elp to sql format from live server using this query:
+SELECT * FROM gigapay.elp_logs where created_at LIKE '2022-09-22%' OR updated_at LIKE '2022-09-22%';
+
+From extracted sql format:
+* open from editor: (notepad++)
+Replace => INSERT INTO ``
+Replace with => INSERT INTO `elp_logs`
+
+Run xampp control panel:
+From browser
+	*localhost/elp
+
+NOTE: Please truncate the local table before the session.
